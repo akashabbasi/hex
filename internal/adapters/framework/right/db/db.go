@@ -22,7 +22,7 @@ func NewAdapter(drivername, dsn string) *Adapter {
 
 	err = db.Ping()
 	if err != nil {
-		log.Fatal("db ping failure: %v", err)
+		log.Fatalf("db ping failure: %v", err)
 	}
 
 	return &Adapter{db: db}
